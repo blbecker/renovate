@@ -21,3 +21,4 @@ jobs:
           with:
             useSlim: true
             token: ${{ secrets.RENOVATE_TOKEN }}
+            configurationFile: ./config.js
