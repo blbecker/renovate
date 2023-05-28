@@ -1,8 +1,6 @@
-name: "HomeLab-Flux CI"
+name: "Renovate"
 on:
   push:
-    branches: [ "ci" ]
-  pull_request:
     branches: [ "main" ]
   schedule:
     # The "*" (#42, asterisk) character has special semantics in YAML, so this
@@ -10,7 +8,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-    renovate:
+    renovate-repos:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout
@@ -21,3 +19,4 @@ jobs:
           with:
             useSlim: true
             token: ${{ secrets.RENOVATE_TOKEN }}
+            configurationFile: ./config.js
