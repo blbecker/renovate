@@ -5,7 +5,6 @@ module.exports = {
     onboarding: true,
     platform: 'github',
     forProcessing: "enabled",
-    dryRun: 'full',
     repositories: [
         'blbecker/homelab-flux',
     ],
