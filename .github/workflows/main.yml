@@ -1,0 +1,23 @@
+name: "HomeLab-Flux CI"
+on:
+  push:
+    branches: [ "ci" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    # The "*" (#42, asterisk) character has special semantics in YAML, so this
+    # string has to be quoted.
+    - cron: '0 0 * * *'
+
+jobs:
+    renovate:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v3.3.0
+          
+        - name: Self-hosted Renovate
+          uses: renovatebot/github-action@v36.0.0
+          with:
+            useSlim: true
+            token: ${{ secrets.RENOVATE_TOKEN }}
