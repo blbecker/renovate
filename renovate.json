@@ -5,9 +5,6 @@
     "onboarding": true,
     "platform": "github",
     "forkProcessing": "enabled",
-    "repositories": [
-        "blbecker/homelab-flux"
-    ],
     "packageRules": [
         {
             "description": "lockFileMaintenance",
