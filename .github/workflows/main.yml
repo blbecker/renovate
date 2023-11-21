@@ -5,6 +5,9 @@ on:
     # string has to be quoted.
     - cron: '0 */4 * * *'
 
+env:
+  RENOVATE_AUTODISCOVER: true
+
 jobs:
     renovate-repos:
       runs-on: ubuntu-latest
