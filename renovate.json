@@ -3,6 +3,11 @@
     "username": "renovate-release",
     "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
     "onboarding": true,
+    "onboardingConfig": {
+        "extends": [
+            "github>blbecker/renovate-config"
+        ]
+    },
     "platform": "github",
     "forkProcessing": "enabled",
     "packageRules": [
