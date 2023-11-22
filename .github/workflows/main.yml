@@ -1,8 +1,6 @@
 name: "Renovate"
 on:
   push:
-    branches: [ "ci" ]
-  pull_request:
     branches: [ "main" ]
   schedule:
     # The "*" (#42, asterisk) character has special semantics in YAML, so this
