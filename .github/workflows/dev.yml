@@ -1,9 +1,6 @@
 name: "Renovate (Dev)"
 on:
   pull_request:
-  push:
-    branches-ignore:
-        - 'main'
 
 env:
     RENOVATE_DRY_RUN: true
