@@ -7,7 +7,6 @@ on:
 
 env:
     RENOVATE_DRY_RUN: true
-    RENOVATE_AUTODISCOVER: true
 
 jobs:
     renovate-repos-dry-run:
