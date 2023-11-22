@@ -1,4 +1,4 @@
-name: "HomeLab-Flux CI"
+name: "Renovate"
 on:
   push:
     branches: [ "ci" ]
@@ -10,7 +10,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-    renovate:
+    renovate-repos:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout
