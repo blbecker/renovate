@@ -9,7 +9,6 @@
         ]
     },
     "platform": "github",
-    "forkProcessing": "enabled",
     "packageRules": [
         {
             "description": "lockFileMaintenance",
