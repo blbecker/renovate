@@ -1,4 +1,4 @@
-name: "Renovate"
+name: "Renovate (Dev)"
 on:
   pull_request:
   push:
@@ -9,7 +9,7 @@ env:
     RENOVATE_DRY_RUN: true
 
 jobs:
-    renovate-repos:
+    renovate-repos-dry-run:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout
@@ -20,4 +20,4 @@ jobs:
           with:
             useSlim: true
             token: ${{ secrets.RENOVATE_TOKEN }}
-            configurationFile: ./config.js
+            configurationFile: ./renovate.json
