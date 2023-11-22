@@ -1,17 +1,25 @@
-module.export = {
-    extends: ['config:base'],
-    timezone: 'America/New York',
-    prHourlyLimit: 5,
-    prConcurrentLimit: 5,
-    labels: ['chore', 'renovate 🎨'],
-    npm: {
-      fileMatch: ['(^|/)package.json$', '(^|/)package.dist.json$']
-    },
-    
-    // Self-Hosted configuration
+module.exports = {
     branchPrefix: 'renovate/',
-    allowScripts: true,
-    repositories: [
-        'blbecker/homelab-flux',
-    ]
-  };
+    username: 'renovate-release',
+    gitAuthor: 'Renovate Bot <bot@renovateapp.com>',
+    onboarding: false,
+    platform: 'github',
+    includeForks: true,
+    dryRun: 'full',
+    repositories: ['blbecker/homelab-flux'],
+    packageRules: [
+        {
+            description: 'lockFileMaintenance',
+            matchUpdateTypes: [
+                'pin',
+                'digest',
+                'patch',
+                'minor',
+                'major',
+                'lockFileMaintenance',
+            ],
+            dependencyDashboardApproval: false,
+            stabilityDays: 0,
+        },
+    ],
+};
