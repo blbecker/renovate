@@ -18,6 +18,5 @@ jobs:
         - name: Self-hosted Renovate
           uses: renovatebot/github-action@v39.1.3
           with:
-            useSlim: true
             token: ${{ secrets.RENOVATE_TOKEN }}
             configurationFile: ./renovate.json
